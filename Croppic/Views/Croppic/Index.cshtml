@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container">
+
+   
+   
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div id="croppic" style="width: 400px; height: 513px; overflow: hidden"></div>
+            @*<div id="croppic"></div>*@
+            <span class="btn" id="cropContainerHeaderButton">Click to Upload Your Picture</span>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+
+    var croppicContaineroutputMinimal = {
+        uploadUrl: '/Croppic/UploadOriginalImage',
+        cropUrl: '/Croppic/CroppedImage',
+        customUploadButtonId: 'cropContainerHeaderButton',
+        modal: true,
+        doubleZoomControls: false,
+        rotateControls: true,
+        loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> '      
+    }
+    var cropContaineroutput = new Croppic('croppic', croppicContaineroutputMinimal);
+
+
+    </script>
+
+    @*<div id="cropContaineroutput"></div>
+<input type="text" id="cropOutput" style="width:100%; padding:5px 4%; margin:20px auto; display:block; border: 1px solid #CCC;" />*@
